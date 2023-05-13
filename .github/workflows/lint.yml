@@ -1,4 +1,4 @@
-name: Build and push DocsGPT Docker image
+name: Python linting
 
 on:
   pull_request:

@@ -1,19 +1,19 @@
 import os
 import sys
-import nltk
-import dotenv
-import typer
-
 from collections import defaultdict
 from typing import List, Optional
 
+import dotenv
+import nltk
+import typer
+
 from parser.file.bulk import SimpleDirectoryReader
-from parser.schema.base import Document
-from parser.open_ai_func import call_openai_api, get_user_permission
-from parser.py2doc import transform_to_docs
-from parser.py2doc import extract_functions_and_classes as extract_py
-from parser.js2doc import extract_functions_and_classes as extract_js
 from parser.java2doc import extract_functions_and_classes as extract_java
+from parser.js2doc import extract_functions_and_classes as extract_js
+from parser.open_ai_func import call_openai_api, get_user_permission
+from parser.py2doc import extract_functions_and_classes as extract_py
+from parser.py2doc import transform_to_docs
+from parser.schema.base import Document
 from parser.token_func import group_split
 
 dotenv.load_dotenv()

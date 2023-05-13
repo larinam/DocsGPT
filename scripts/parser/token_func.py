@@ -1,9 +1,9 @@
 import re
-import tiktoken
-
-from typing import List
-from parser.schema.base import Document
 from math import ceil
+from typing import List
+
+import tiktoken
+from parser.schema.base import Document
 
 
 def separate_header_and_body(text):

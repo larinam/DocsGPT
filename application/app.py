@@ -1,8 +1,8 @@
+import asyncio
 import datetime
 import json
 import os
 import traceback
-import asyncio
 
 import dotenv
 import requests
@@ -26,10 +26,9 @@ from langchain.prompts.chat import (
 from pymongo import MongoClient
 from werkzeug.utils import secure_filename
 
+from core.settings import settings
 from error import bad_request
 from worker import ingest_worker
-from core.settings import settings
-import celeryconfig
 
 # os.environ["LANGCHAIN_HANDLER"] = "langchain"
 

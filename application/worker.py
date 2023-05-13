@@ -67,7 +67,7 @@ def ingest_worker(self, directory, formats, name_job, filename, user):
     call_openai_api(docs, full_path, self)
     self.update_state(state='PROGRESS', meta={'current': 100})
 
-    if sample == True:
+    if sample:
         for i in range(min(5, len(raw_docs))):
             print(raw_docs[i].text)
 

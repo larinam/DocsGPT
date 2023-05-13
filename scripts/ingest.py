@@ -38,7 +38,8 @@ def ingest(yes: bool = typer.Option(False, "-y", "--yes", prompt=False,
            limit: Optional[int] = typer.Option(None, help="Maximum number of files to read."),
            formats: Optional[List[str]] = typer.Option([".rst", ".md"],
                                                        help="""List of required extensions (list with .)
-                                                        Currently supported: .rst, .md, .pdf, .docx, .csv, .epub, .html, .mdx"""),
+                                                        Currently supported: 
+                                                        .rst, .md, .pdf, .docx, .csv, .epub, .html, .mdx"""),
            exclude: Optional[bool] = typer.Option(True, help="Whether to exclude hidden files (dotfiles)."),
            sample: Optional[bool] = typer.Option(False,
                                                  help="Whether to output sample of the first 5 split documents."),
@@ -65,7 +66,7 @@ def ingest(yes: bool = typer.Option(False, "-y", "--yes", prompt=False,
         # docs = text_splitter.split_documents(raw_docs)
 
         # Sample feature
-        if sample == True:
+        if sample:
             for i in range(min(5, len(raw_docs))):
                 print(raw_docs[i].text)
 

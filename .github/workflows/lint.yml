@@ -1,9 +1,11 @@
 name: Python linting
 
 on:
-  pull_request:
   push:
     branches:
+      - '*'
+  pull_request:
+    types: [ opened, synchronize ]
 
 jobs:
   ruff:

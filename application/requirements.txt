@@ -31,3 +31,4 @@ tqdm==4.66.1
 transformers==4.36.2
 unstructured==0.12.2
 Werkzeug==3.0.1
+pillow>=10.2.0 # not directly required, pinned by Snyk to avoid a vulnerability

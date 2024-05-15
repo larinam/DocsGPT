@@ -1,5 +1,5 @@
 # Builder Stage
-FROM ubuntu:mantic as builder
+FROM ubuntu:23.10 as builder
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -42,7 +42,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
 # Final Stage
-FROM ubuntu:mantic as final
+FROM ubuntu:23.10 as final
 
 # Install Python
 RUN apt-get update && apt-get install -y --no-install-recommends python3.11 && \

@@ -34,3 +34,4 @@ torch
 tqdm==4.66.3
 transformers==4.44.0
 Werkzeug==3.0.3
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
